@@ -1,0 +1,114 @@
+/* **********************
+A.(c)a)D.(e)m.(i)C.(a)
+autor:   iStuffs, Samuel DIDIER-LAURENT
+version: v0.5
+*/
+body {
+  counter-reset: h1; }
+
+h1, .h1 {
+  counter-reset: h2;
+  margin-left: 10px; }
+
+h2, .h2 {
+  counter-reset: h3;
+  margin-left: 20px; }
+
+h3, .h3 {
+  counter-reset: h4;
+  margin-left: 30px; }
+
+h4, .h4 {
+  counter-reset: h5;
+  margin-left: 40px; }
+
+h5, .h5 {
+  counter-reset: h6;
+  margin-left: 50px; }
+
+h6, .h6 {
+  counter-reset: h7;
+  margin-left: 60px; }
+
+h7, .h7 {
+  margin-left: 70px; }
+
+h1::before, .h1::before {
+  counter-increment: h1;
+  content: "" counter(h1, upper-roman) "."; }
+
+h2::before, .h2::before {
+  counter-increment: h2;
+  content: "" counter(h2, upper-alpha) "."; }
+
+h3::before, .h3::before {
+  counter-increment: h3;
+  content: "" counter(h3, decimal) "."; }
+
+h4::before, .h4::before {
+  counter-increment: h4;
+  content: "" counter(h4, lower-alpha) "."; }
+
+h5::before, .h5::before {
+  counter-increment: h5;
+  content: "" counter(h5, decimal) ")"; }
+
+h6::before, .h6::before {
+  counter-increment: h6;
+  content: "(" counter(h6, lower-alpha) ")"; }
+
+h7::before, .h7::before {
+  counter-increment: h7;
+  content: "(" counter(h7, lower-roman) ")"; }
+
+ol.academica, ol.academica ol {
+  list-style-type: none; }
+
+ol.academica {
+  counter-reset: ol1; }
+
+ol.academica > li, .ol1 > li {
+  counter-reset: ol2; }
+
+ol.academica > li::before, .ol1 > li::before {
+  counter-increment: ol1;
+  content: "" counter(ol1, upper-roman) "."; }
+
+ol.academica > li > ol > li, .ol2 > li {
+  counter-reset: ol3; }
+
+ol.academica > li > ol > li::before, .ol2 > li::before {
+  counter-increment: ol2;
+  content: "" counter(ol2, upper-alpha) "."; }
+
+ol.academica > li > ol > li > ol > li, .ol3 > li {
+  counter-reset: ol4; }
+
+ol.academica > li > ol > li > ol > li::before, .ol3 > li::before {
+  counter-increment: ol3;
+  content: "" counter(ol3, decimal) "."; }
+
+ol.academica > li > ol > li > ol > li > ol > li, .ol4 > li {
+  counter-reset: ol5; }
+
+ol.academica > li > ol > li > ol > li > ol > li::before, .ol4 > li::before {
+  counter-increment: ol4;
+  content: "" counter(ol4, lower-alpha) "."; }
+
+ol.academica > li > ol > li > ol > li > ol > li > ol > li, .ol5 > li {
+  counter-reset: ol6; }
+
+ol.academica > li > ol > li > ol > li > ol > li > ol > li::before, .ol5 > li::before {
+  counter-increment: ol5;
+  content: "" counter(ol5, decimal) ")"; }
+
+ol.academica > li > ol > li > ol > li > ol > li > ol > li > ol > li, .ol6 > li {
+  counter-reset: ol7; }
+
+ol.academica > li > ol > li > ol > li > ol > li > ol > li > ol > li::before, .ol6 > li::before {
+  counter-increment: ol6;
+  content: "(" counter(ol6, lower-alpha) ")"; }
+
+ol.academica > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li::before, .ol7 > li::before {
+  counter-increment: ol7;
+  content: "(" counter(ol7, lower-roman) ")"; }

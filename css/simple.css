@@ -1,0 +1,22 @@
+ol { /* lvl1 */
+  list-style-type: upper-roman; /* I. */
+}
+ol ol { /* lvl2 */
+  list-style-type: upper-alpha; /* A. */
+}
+ol ol ol { /* lvl3 */
+  list-style-type: decimal; /* 1. */
+}
+ol ol ol ol { /* lvl4 */
+  list-style-type: lower-alpha; /* a) */
+}
+
+ol ol ol ol ol { /* lvl5 */
+  list-style-type: decimal; /* (1) */
+}
+ol ol ol ol ol ol { /* lvl6 */
+  list-style-type: lower-alpha; /* (a) */
+}
+ol ol ol ol ol ol ol { /* lvl7 */
+  list-style-type: lower-roman; /* (i) */
+}

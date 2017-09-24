@@ -1,0 +1,119 @@
+/* **********************
+A.(c)a)D.(e)m.(i)C.(a)
+autor:   iStuffs, Samuel DIDIER-LAURENT
+version: v0.5
+*/
+
+//* CONFIGURATION */
+
+//The class used on the first ol
+$class:          '.academica';
+//Separator for simple list
+$main-separator: ".";
+
+//Do you want counter on your headings (Hn)?
+$headings-counter: true;
+//Indenation for headings
+$headings-indent: 10px;
+//Do you want counter on your organised lists (OLs)
+$list-counter:   true;
+
+
+//* INCLUDE THEME */
+@import 'academica.harvard.theme';
+
+// theme exemples
+
+//for simple counters just use as many css's list-style-type as needed
+//$counters: upper-roman, upper-alpha, decimal, lower-alpha, decimal, lower-alpha, lower-roman;
+
+//for more configuration use this type of configuration
+// $counters: (
+//   (pre-counter: "",  counter-style: 'upper-roman', separator: "."), //  I.
+//   (pre-counter: "",  counter-style: 'upper-alpha', separator: "."), //  A.
+//   (pre-counter: "",  counter-style: 'decimal',     separator: "."), //  1.
+//   (pre-counter: "",  counter-style: 'lower-alpha', separator: "."), //  a.
+//   (pre-counter: "",  counter-style: 'decimal',     separator: ")"), //  1)
+//   (pre-counter: "(", counter-style: 'lower-alpha', separator: ")"), // (a)
+//   (pre-counter: "(", counter-style: 'lower-roman', separator: ")")  // (i)
+// );
+
+//* YOU SHOULD NOT ANITING ANY THURTHER */
+
+// HEADER COUNTERS
+@if $headings-counter == true {
+  body {
+    counter-reset: h1;
+  }
+$indent: 0px;
+  @for $i from 1 through length($counters) {
+    // header counter initialisation
+    $indent: $indent + $headings-indent;
+    h#{$i}, .h#{$i} {
+      @if ($i != length($counters)) {
+        counter-reset: h#{$i+1};
+      }
+      margin-left: $indent;
+    }
+  }
+  // put header counter in headings
+  $i: 0;
+  @each $counter in $counters {
+    $i: $i+1;
+    @if type-of($counter) == map {
+      $pre-counter:   map-get($counter, pre-counter);
+      $counter-style: map-get($counter, counter-style);
+      $separator:     map-get($counter, separator);
+      h#{$i}::before, .h#{$i}::before {
+        counter-increment: h#{$i};
+        content: $pre-counter counter(h#{$i}, #{$counter-style}) $separator;
+      }
+    } @else {
+      h#{$i}::before, .h#{$i}::before {
+        counter-increment: h#{$i};
+        content: counter(h#{$i}, #{$counter}) $main-separator;
+      }
+    }
+  }
+}
+
+// LIST COUNTER
+@if $list-counter == true {
+  $selector-base:   ol#{$class};
+  $selector-middle: '';
+  $selector-final:  '>li';
+
+  #{$selector-base}, #{$selector-base} ol  {
+    list-style-type: none;
+  }
+  #{$selector-base} {
+    counter-reset: ol1;
+  }
+
+  $i: 0;
+  @each $counter in $counters {
+    // list initialisation
+    @if $i != length($counters)-1 {
+      #{$selector-base}#{$selector-middle}#{$selector-final}, .ol#{$i+1}>li {
+        counter-reset: ol#{$i+2};
+      }
+    }
+    // put list counter in list items
+    $i: $i+1;
+    @if type-of($counter) == map {
+      $pre-counter:   map-get($counter, pre-counter);
+      $counter-style: map-get($counter, counter-style);
+      $separator:     map-get($counter, separator);
+      #{$selector-base}#{$selector-middle}#{$selector-final}::before, .ol#{$i}>li::before {
+        counter-increment: ol#{$i};
+        content: $pre-counter counter(ol#{$i}, #{$counter-style}) $separator;
+      }
+    } @else {
+      #{$selector-base}#{$selector-middle}#{$selector-final}::before, .ol#{$i}::before {
+        counter-increment: ol#{$i};
+        content: counter(ol#{$i}, #{$counter}) $main-separator;
+      }
+    }
+    $selector-middle: "#{$selector-middle}>li>ol";
+  }
+}
