@@ -1,0 +1,16 @@
+//* CONFIGURATION *//
+
+//The class used on the first ol.
+$class: '.academica' !default;
+
+//Separator for simple list.
+$main-separator: "." !default;
+
+//Do you want counter on your headings (Hn)?
+$headings-counter: true !default;
+
+//Indentation for headings.
+$headings-indent: 10px !default;
+
+//Do you want counter on your organized lists (OLs).
+$list-counter: true !default;

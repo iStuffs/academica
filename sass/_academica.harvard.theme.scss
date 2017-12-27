@@ -1,3 +1,5 @@
+//* HARVARD THEME for A.(c)a)D.(e)m.(i)C.(a) *//
+
 $counters: (
   (pre-counter: "",  counter-style: 'upper-roman', separator: "."),
   (pre-counter: "",  counter-style: 'upper-alpha', separator: "."),
@@ -6,5 +8,7 @@ $counters: (
   (pre-counter: "",  counter-style: 'decimal',     separator: ")"),
   (pre-counter: "(", counter-style: 'lower-alpha', separator: ")"),
   (pre-counter: "(", counter-style: 'lower-roman', separator: ")")
-);
-//$counters: upper-roman, upper-alpha, decimal, lower-alpha, decimal, lower-alpha, lower-roman;
+) !default;
+
+
+// aviable counter-style: disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-alpha, upper-alpha;

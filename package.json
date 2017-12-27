@@ -1,0 +1,22 @@
+{
+  "name": "academica",
+  "version": "0.0.1",
+  "description": "Custom css counters for headings and lists structuration.",
+  "main": "sass/academica.scss",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iStuffs/academica.git"
+  },
+  "author": "iStuffs: Samuel DIDIER-LAURENT <istuffs@gmail.com> (https://istuffs.be)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iStuffs/academica/issues"
+  },
+  "homepage": "https://github.com/iStuffs/academica#readme"
+}

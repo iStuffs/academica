@@ -1,25 +1,42 @@
-/* **********************
+/* ***************************************
 A.(c)a)D.(e)m.(i)C.(a)
 autor:   iStuffs, Samuel DIDIER-LAURENT
-version: v0.5
-*/
+version: v0.0.1
+***************************************** */
 
-//* CONFIGURATION */
+//* Variables *//
+//The class used on the first ol. ('.academica' is the default value)
+//$class: '.my-awesome-list';
 
-//The class used on the first ol
-$class:          '.academica';
-//Separator for simple list
-$main-separator: ".";
+//Separator for simple list. ("." is the default value)
+//$main-separator: ".";
 
-//Do you want counter on your headings (Hn)?
-$headings-counter: true;
-//Indenation for headings
-$headings-indent: 10px;
-//Do you want counter on your organised lists (OLs)
-$list-counter:   true;
+//Do you want counter on your headings (Hn)? (true is the default value)
+//$headings-counter: true;
+
+//Indentation for headings. (10px is the default value)
+//$headings-indent: 1.5em;
+
+//Do you want counter on your organized lists (OLs). (true is the default value)
+//$list-counter: true;
+
+@import 'academica.variables';
+
+//* THEME *//
+
+// SIMPLE THEMING
+
+//change the default separator for simple list in variables
+
+//aviable counter-style: disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-alpha, upper-alpha;
+//add as many as you want in the $counters variable
+
+//$counters: upper-roman, upper-alpha, decimal, lower-alpha, decimal, lower-alpha, lower-roman;
 
 
-//* INCLUDE THEME */
+// ADVANCED THEMING
+
+
 @import 'academica.harvard.theme';
 
 // theme exemples
@@ -38,7 +55,7 @@ $list-counter:   true;
 //   (pre-counter: "(", counter-style: 'lower-roman', separator: ")")  // (i)
 // );
 
-//* YOU SHOULD NOT ANITING ANY THURTHER */
+//* YOU SHOULD NOT EDIT ANYTHING ANY THURTHER */
 
 // HEADER COUNTERS
 @if $headings-counter == true {
