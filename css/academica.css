@@ -1,63 +1,63 @@
-/* **********************
+/* ***************************************
 A.(c)a)D.(e)m.(i)C.(a)
 autor:   iStuffs, Samuel DIDIER-LAURENT
-version: v0.5
-*/
+version: v0.0.1
+***************************************** */
 body {
   counter-reset: h1; }
 
-h1, .h1 {
+h1:not([data-academica=untrack]), .h1:not([data-academica=untrack]) {
   counter-reset: h2;
   margin-left: 10px; }
 
-h2, .h2 {
+h2:not([data-academica=untrack]), .h2:not([data-academica=untrack]) {
   counter-reset: h3;
   margin-left: 20px; }
 
-h3, .h3 {
+h3:not([data-academica=untrack]), .h3:not([data-academica=untrack]) {
   counter-reset: h4;
   margin-left: 30px; }
 
-h4, .h4 {
+h4:not([data-academica=untrack]), .h4:not([data-academica=untrack]) {
   counter-reset: h5;
   margin-left: 40px; }
 
-h5, .h5 {
+h5:not([data-academica=untrack]), .h5:not([data-academica=untrack]) {
   counter-reset: h6;
   margin-left: 50px; }
 
-h6, .h6 {
+h6:not([data-academica=untrack]), .h6:not([data-academica=untrack]) {
   counter-reset: h7;
   margin-left: 60px; }
 
-h7, .h7 {
+h7:not([data-academica=untrack]), .h7:not([data-academica=untrack]) {
   margin-left: 70px; }
 
-h1::before, .h1::before {
+h1:not([data-academica=untrack])::before, .h1:not([data-academica=untrack])::before {
   counter-increment: h1;
   content: "" counter(h1, upper-roman) "."; }
 
-h2::before, .h2::before {
+h2:not([data-academica=untrack])::before, .h2:not([data-academica=untrack])::before {
   counter-increment: h2;
   content: "" counter(h2, upper-alpha) "."; }
 
-h3::before, .h3::before {
+h3:not([data-academica=untrack])::before, .h3:not([data-academica=untrack])::before {
   counter-increment: h3;
   content: "" counter(h3, decimal) "."; }
 
-h4::before, .h4::before {
+h4:not([data-academica=untrack])::before, .h4:not([data-academica=untrack])::before {
   counter-increment: h4;
   content: "" counter(h4, lower-alpha) "."; }
 
-h5::before, .h5::before {
+h5:not([data-academica=untrack])::before, .h5:not([data-academica=untrack])::before {
   counter-increment: h5;
   content: "" counter(h5, decimal) ")"; }
 
-h6::before, .h6::before {
+h6:not([data-academica=untrack])::before, .h6:not([data-academica=untrack])::before {
   counter-increment: h6;
   content: "(" counter(h6, lower-alpha) ")"; }
 
-h7::before, .h7::before {
+h7:not([data-academica=untrack])::before, .h7:not([data-academica=untrack])::before {
   counter-increment: h7;
   content: "(" counter(h7, lower-roman) ")"; }
 

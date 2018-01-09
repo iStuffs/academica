@@ -1,7 +1,9 @@
 ![](docs/img/academica-header.png)
 
 # A.(c)a)D.(e)m.(i)C.(a) - CSS custom counters with SASS magic
-
+[![GitHub release](https://img.shields.io/github/release/iStuffs/academica.svg)](https://github.com/iStuffs/academica/releases/latest)
+[![npm](https://img.shields.io/npm/v/academica.svg)](https://www.npmjs.com/package/academica)
+[![npm](https://img.shields.io/npm/l/academica.svg)](https://www.npmjs.com/package/academica)
 ## How to use it right out the box
 
 Add `academica.css` stylesheet to your head
@@ -24,6 +26,10 @@ Add the class `academica` to your `ol`
   <li>...</li>
 </ol>
 ```
+
+this code will render as:
+
+![](docs/img/exemple01.png)
 
 **And *‘voila’*, it's simply works.**
 You can go beyond and personalize the counters, see configuration to know more.
@@ -64,7 +70,9 @@ $counters: upper-roman, upper-alpha, decimal, lower-alpha, decimal, lower-alpha,
 
 Available list-style-type:
 
-<ol>
+![](docs/img/list-style-type.png)
+
+<!-- <ol>
   <li style="list-style-type:disc">disc</li>
   <li style="list-style-type:circle">circle</li>
   <li style="list-style-type:square">square</li>
@@ -75,7 +83,7 @@ Available list-style-type:
   <li style="list-style-type:lower-greek">lower-greek</li>
   <li style="list-style-type:lower-alpha">lower-alpha</li>
   <li style="list-style-type:upper-alpha">upper-alpha</li>
-</ol>
+</ol> -->
 
 Separator for simple list
 
