@@ -1,6 +1,6 @@
 {
   "name": "academica",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Custom css counters for headings and lists structuration.",
   "main": "sass/academica.scss",
   "directories": {
