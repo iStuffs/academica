@@ -27,12 +27,13 @@ Add the class `academica` to your `ol`
 </ol>
 ```
 
-this code will render as:
+the code above will render as:
 
 ![](docs/img/exemple01.png)
 
-**And *‘voila’*, it's simply works.**
-You can go beyond and personalize the counters, see configuration to know more.
+**And *‘voila’*, it's simply works.**<br>
+You can go beyond and personalize the counters, see configuration to know more.<br>
+Or Inspect the [demo page](https://istuffs.github.io/academica/) to figure out more.
 
 ## Configuration
 
