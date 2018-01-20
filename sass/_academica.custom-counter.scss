@@ -1,0 +1,27 @@
+// Only works in firefox
+//https://caniuse.com/#feat=css-at-counter-style
+//"https://developer.mozilla.org/fr/docs/Web/CSS/@counter-style
+
+@counter-style binary {
+  system: numeric;
+  symbols: '0' '1';
+  suffix: "\";
+}
+@counter-style octal {
+  system: numeric;
+  symbols: '0' '1' '2' '3' '4' '5' '6' '7';
+  suffix: ") ";
+  prefix: "oct(";
+}
+@counter-style hex {
+  system: numeric;
+  symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
+  suffix: "\\ ";
+  prefix: "#";
+}
+/*
+USAGE
+.hexdecimal {
+  list-style: hex;
+}
+*/
